@@ -19,6 +19,7 @@ class _HomeState extends State<Home> {
         SystemNavigator.pop();
       },
       child: Scaffold(
+        resizeToAvoidBottomInset : false,
           body: SafeArea(
               child: Container(
                 height: MediaQuery.of(context).size.height,
@@ -262,7 +263,7 @@ class _HomeState extends State<Home> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 10,),
+                    SizedBox(height:  MediaQuery.of(context).size.height/70),
                     //Find A Doctor
                     Padding(
                       padding: const EdgeInsets.only(top:12.0,left: 25),
@@ -272,128 +273,164 @@ class _HomeState extends State<Home> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 5,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height/5,
-                              width:MediaQuery.of(context).size.width/3,
-                              child: InkWell(
-                                onTap: () {
-                                  Get.to(DoctorDetails());
-                                },
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image.asset('images/doc2.jpg',
-                                  fit: BoxFit.cover,
+                    SizedBox(height: MediaQuery.of(context).size.height/190),
+                    SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Column(
+                                children: [
+                                  Container(
+                                    height: MediaQuery.of(context).size.height/5,
+                                    width:MediaQuery.of(context).size.width/3,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Get.to(DoctorDetails());
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Card(
+                                            shadowColor: Colors.black,
+                                            semanticContainer: true,
+                                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(15.0),
+                                              child: Image.asset('images/doc2.jpg',
+                                                fit: BoxFit.fitHeight,
+                                              ),
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10.0),
+                                            ),
+                                            elevation: 5,
+                                            // margin: EdgeInsets.all(10),
+                                          ),
+                                          Text('  Heart Specialist',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 5,
-                                  //margin: EdgeInsets.all(10),
-                                ),
-                              ),
-                            ),
-                            Text('Heart Specialist',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
-                          ],
-                        ),
 
-                        Column(
-                          children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height/5,
-                              width:MediaQuery.of(context).size.width/3,
-                              child: InkWell(
-                                onTap: () {
-                                  Get.to(DoctorDetails());
-                                },
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image.asset('images/doc1.png',
-                                    fit: BoxFit.cover,
-                                  ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 5,
-                                  //margin: EdgeInsets.all(10),
-                                ),
+                                ],
                               ),
-                            ),
-                            Text('Chest Specialist',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 15,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height/5,
-                              width:MediaQuery.of(context).size.width/3,
-                              child: InkWell(
-                                onTap: () {
-                                  Get.to(DoctorDetails());
-                                },
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image.asset('images/doc3.jpg',
-                                    fit: BoxFit.contain,
+                              Column(
+                                children: [
+                                  Container(
+                                    height: MediaQuery.of(context).size.height/5,
+                                    width:MediaQuery.of(context).size.width/3,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Get.to(DoctorDetails());
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Card(
+                                            shadowColor: Colors.black,
+                                            semanticContainer: true,
+                                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(15.0),
+                                              child: Image.asset('images/doc1.png',
+                                                fit: BoxFit.fitHeight,
+                                              ),
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10.0),
+                                            ),
+                                            elevation: 5,
+                                            // margin: EdgeInsets.all(10),
+                                          ),
+                                          Text('  Chest Specialist',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 5,
-                                 // margin: EdgeInsets.all(10),
-                                ),
+
+                                ],
                               ),
-                            ),
-                            Text('Gastroenterologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: MediaQuery.of(context).size.height/5,
-                              width:MediaQuery.of(context).size.width/3,
-                              child: InkWell(
-                                onTap: () {
-                                  Get.to(DoctorDetails());
-                                },
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image.asset('images/doc4.png',
-                                    fit: BoxFit.contain,
+                            ],
+                          ),
+                         // SizedBox(height: MediaQuery.of(context).size.height/190),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              Column(
+                                children: [
+                                  Container(
+                                    height: MediaQuery.of(context).size.height/4,
+                                    width:MediaQuery.of(context).size.width/3,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Get.to(DoctorDetails());
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Card(
+                                            shadowColor: Colors.black,
+                                            semanticContainer: true,
+                                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(15.0),
+                                              child: Image.asset('images/doc1.png',
+                                                fit: BoxFit.fitHeight,
+
+                                              ),
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10.0),
+                                            ),
+                                            elevation: 5,
+                                            // margin: EdgeInsets.all(10),
+                                          ),
+                                          Text('Gastroenterologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 5,
-                                 // margin: EdgeInsets.all(10),
-                                ),
+                                ],
                               ),
-                            ),
-                            Text('Nephrologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SizedBox(height:MediaQuery.of(context).size.height/8,),
+                              Column(
+                                children: [
+                                  Container(
+                                    height: MediaQuery.of(context).size.height/4,
+                                    width:MediaQuery.of(context).size.width/3,
+                                    child: InkWell(
+                                      onTap: () {
+                                        Get.to(DoctorDetails());
+                                      },
+                                      child: Column(
+                                        children: [
+                                          Card(
+                                            shadowColor: Colors.black,
+                                            semanticContainer: true,
+                                            clipBehavior: Clip.antiAliasWithSaveLayer,
+                                            child: Padding(
+                                              padding: const EdgeInsets.all(15.0),
+                                              child: Image.asset('images/doc4.png',
+                                                fit: BoxFit.fitHeight,
+                                              ),
+                                            ),
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(10.0),
+                                            ),
+                                            elevation: 5,
+                                            // margin: EdgeInsets.all(10),
+                                          ),
+                                          Text('  Nephrologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
 
           ]),
               )

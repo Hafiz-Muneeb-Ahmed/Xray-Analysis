@@ -51,7 +51,7 @@ class Diseasedata extends StatelessWidget //__
                     padding: const EdgeInsets.only(left: 5),
                     child: Column(
                       children: [
-                        Row(
+                        Column(
                           children: [
                             Text('*Cough produce greenish,yellow or even bloody mucusFever '
                                 ,style: TextStyle(fontFamily: 'Manrope',fontWeight: FontWeight.w800,fontSize: 14),),
