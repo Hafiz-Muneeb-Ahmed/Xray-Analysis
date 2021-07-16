@@ -346,22 +346,31 @@ class _HomeState extends State<Home> {
                                 onTap: () {
                                   Get.to(DoctorDetails());
                                 },
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image.asset('images/doc3.jpg',
-                                    fit: BoxFit.contain,
-                                  ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 5,
-                                 // margin: EdgeInsets.all(10),
+                                child: Column(
+                                  children: [
+                                    Card(
+                                      shadowColor: Colors.black,
+                                      semanticContainer: true,
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Image.asset('images/doc3.jpg',
+                                          fit: BoxFit.fitHeight,
+
+                                        ),
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                      elevation: 5,
+                                     // margin: EdgeInsets.all(10),
+                                    ),
+                                    Text('Gastroenterologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+                                  ],
                                 ),
                               ),
                             ),
-                            Text('Gastroenterologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+
                           ],
                         ),
                         Column(
@@ -373,24 +382,33 @@ class _HomeState extends State<Home> {
                                 onTap: () {
                                   Get.to(DoctorDetails());
                                 },
-                                child: Card(
-                                  shadowColor: Colors.black,
-                                  semanticContainer: true,
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  child: Image.asset('images/doc4.png',
-                                    fit: BoxFit.contain,
-                                  ),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(10.0),
-                                  ),
-                                  elevation: 5,
-                                 // margin: EdgeInsets.all(10),
+                                child: Column(
+                                  children: [
+                                    Card(
+                                      shadowColor: Colors.black,
+                                      semanticContainer: true,
+                                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(15.0),
+                                        child: Image.asset('images/doc3.jpg',
+                                          fit: BoxFit.fitHeight,
+                                        ),
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10.0),
+                                      ),
+                                      elevation: 5,
+                                      // margin: EdgeInsets.all(10),
+                                    ),
+                                    Text('  Nephrologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+                                  ],
                                 ),
                               ),
                             ),
-                            Text('Nephrologists',style: TextStyle(fontSize: 15,fontFamily: 'Manrope',fontWeight: FontWeight.bold ),),
+
                           ],
                         ),
+
                       ],
                     ),
                     SizedBox(height:MediaQuery.of(context).size.height/8,),

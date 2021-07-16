@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:get/state_manager.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -19,7 +21,7 @@ class Controller extends GetxController{
   var Pleural_Thickening_p12=0.0;
   var Pneumonia_p13=0.0;
   var Pneumothorax_p14=0.0;
-
+  File image;
 
 
 
